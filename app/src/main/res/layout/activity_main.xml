@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="livedata.bcr.app.model.User"/>
+        <variable
+            name="lv"
+            type="livedata.bcr.app.viewmodel.MainViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context="livedata.bcr.app.view.MainActivity">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{vm.name}"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:padding="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{lv.name}"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:padding="20dp"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:padding="12dp"
+            android:hint="type your name"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</layout>
